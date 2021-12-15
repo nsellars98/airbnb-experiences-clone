@@ -1,0 +1,133 @@
+/* General Styles*/
+
+:root {
+  /* --clr-background-600: #23252c;
+  --clr-background-700: #1a1b21;
+  --clr-background-800: #161619;
+
+  --clr-accent-100: #f5f5f5;
+  --clr-accent-200: #dcdcdc;
+  --clr-accent-300: #d1d5db;
+  --clr-accent-400: #f3bf99;
+  --clr-accent-500: #918e9b;
+  --clr-accent-600: #5093e2;
+  --clr-accent-700: #374151;
+  --clr-accent-800: #1e1f26;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #000; */
+
+  --clr-accent-500: #918e9b;
+
+  --ff-primary: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+html {
+  font-family: var(--ff-primary);
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 1.25rem;
+}
+
+.gray--text {
+  color: var(--clr-accent-500);
+}
+
+.bold--text {
+  font-weight: bold;
+}
+
+.navbar,
+.hero {
+  margin: 0 auto;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  height: 4.375rem;
+  box-shadow: 0 0.18641rem 0.466025rem rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.nav--logo {
+  padding: 1.25rem 2.25rem;
+}
+
+/* Hero Section Syles */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero--photo {
+  width: 80%;
+  align-self: center;
+  margin-top: 0.625rem;
+}
+
+.hero--header {
+  font-size: 2.25rem;
+  /* padding-top: 2rem;
+  margin-bottom: 1rem; */
+  /*
+     Use em for padding and margin
+     Use rem for font size.
+  */
+}
+
+.hero--text {
+  max-width: 22.1875rem;
+}
+
+.hero--header,
+.hero--text {
+  padding-left: 2.25rem;
+  line-height: 110%;
+  width: 85%;
+}
+
+/* Card Section Styles */
+
+.card {
+  width: 175px;
+  font-size: 12px;
+  margin-left: 37px;
+}
+
+.card--image {
+  width: 100%;
+  margin-top: 29px;
+  border-radius: 9px;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--stats > span {
+  padding: 2px;
+}
+
+.card > p {
+  padding: 2px 0;
+}
+
+.card--icon {
+  height: 14px;
+  border-radius: 0.5px;
+  padding-right: 2px;
+}
