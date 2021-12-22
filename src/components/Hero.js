@@ -1,10 +1,14 @@
 import React from "react";
-import heroPhotoGrid from "../assets/photo-grid.png";
+import grid from "../assets/img/photo-grid.png";
 
 function Hero() {
   return (
     <section className="hero">
-      <img src={heroPhotoGrid} alt="grid" className="hero--photo"/>
+      <img 
+        src={grid}
+        alt="grid"
+        className="hero--photo"
+      />
       <h1 className="hero--header">Online Experiences</h1>
       <p 
         className="hero--text">

@@ -1,19 +1,36 @@
 import React from "react";
-import image from "../assets/katie-zaferes.png";
-import icon from "../assets/star.png";
+import icon from "../assets/img/star.png";
 
-function Card() {
+function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  } // else, location != online && spots still available, doNothing();
+
   return (
     <div className="card">
-      <img src={image} alt="Katie Zaferes" className="card--image"/>
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img 
+        src={require(`../assets/img/${props.coverImg}`).default}
+        alt="AirBnB Experience"
+        className="card--image"
+      />
       <div className="card--stats">
-        <img src={icon} alt="icon" className="card--icon"/>
-        <span>5.0</span>
-        <span className="gray--text">(6) • </span>
-        <span className="gray--text">USA</span>
+        <img
+          src={icon}
+          alt="icon"
+          className="card--icon"
+        />
+        <span>{props.stats.rating}</span>
+        <span className="gray--text">({props.stats.reviewCount}) • </span>
+        <span className="gray--text">{props.location}</span>
       </div>
-        <p>Life lessons with Katie Zaferes</p>
-        <p><span className="bold--text">From $136</span> / person</p>
+        <p className="card--title">{props.title}</p>
+        <p className="card--price">
+          <span className="bold--text">From ${props.price}</span> / person
+        </p>
     </div>
   );
 }

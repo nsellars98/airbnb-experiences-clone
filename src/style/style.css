@@ -1,31 +1,17 @@
 /* General Styles*/
 
 :root {
-  /* --clr-background-600: #23252c;
-  --clr-background-700: #1a1b21;
-  --clr-background-800: #161619;
-
-  --clr-accent-100: #f5f5f5;
-  --clr-accent-200: #dcdcdc;
-  --clr-accent-300: #d1d5db;
-  --clr-accent-400: #f3bf99;
   --clr-accent-500: #918e9b;
-  --clr-accent-600: #5093e2;
-  --clr-accent-700: #374151;
-  --clr-accent-800: #1e1f26;
 
   --clr-neutral-100: #fff;
-  --clr-neutral-900: #000; */
-
-  --clr-accent-500: #918e9b;
 
   --ff-primary: "Poppins", sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  /* margin: 0;
-  padding: 0; */
 }
 
 html {
@@ -37,7 +23,7 @@ body {
 }
 
 section {
-  padding: 1.25rem;
+  padding: 1.25em;
 }
 
 .gray--text {
@@ -56,13 +42,14 @@ section {
 /* Navbar Styles */
 
 .navbar {
-  height: 4.375rem;
-  box-shadow: 0 0.18641rem 0.466025rem rgba(0, 0, 0, 0.1);
+  height: 4.375em;
+  box-shadow: 0 0.19em 0.5em rgba(0, 0, 0, 0.1);
   display: flex;
 }
 
 .nav--logo {
-  padding: 1.25rem 2.25rem;
+  padding: 1.25em 2.25em;
+  max-width: 175px;
 }
 
 /* Hero Section Syles */
@@ -75,42 +62,64 @@ section {
 .hero--photo {
   width: 80%;
   align-self: center;
-  margin-top: 0.625rem;
+  margin-top: 0.625em;
+  margin-bottom: 0;
+  max-width: 550px;
 }
 
 .hero--header {
   font-size: 2.25rem;
-  /* padding-top: 2rem;
-  margin-bottom: 1rem; */
-  /*
-     Use em for padding and margin
-     Use rem for font size.
-  */
+  padding-left: 0.5em;
+  margin-top: 0.89em;
+  margin-bottom: 0;
+  line-height: 2.5rem;
 }
 
 .hero--text {
-  max-width: 22.1875rem;
+  max-width: 355px;
+  margin-top: 1em;
+  padding-left: 1.25em;
+  line-height: 1.125rem;
 }
 
 .hero--header,
 .hero--text {
-  padding-left: 2.25rem;
-  line-height: 110%;
   width: 85%;
 }
 
 /* Card Section Styles */
 
+.cards--list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.25em;
+  overflow-x: auto;
+  margin: 0 1.25em;
+}
+
 .card {
-  width: 175px;
-  font-size: 12px;
-  margin-left: 37px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  font-size: 0.75em;
+  position: relative;
+}
+
+.card--badge {
+  position: absolute;
+  background-color: var(--clr-neutral-100);
+  padding: 0.3125em 0.4375em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  margin-left: 0.55em;
 }
 
 .card--image {
   width: 100%;
-  margin-top: 29px;
-  border-radius: 9px;
+  margin-top: -0.6em;
+  margin-bottom: 0.33em;
+  border-radius: 0.8em;
 }
 
 .card--stats {
@@ -119,15 +128,25 @@ section {
 }
 
 .card--stats > span {
-  padding: 2px;
-}
-
-.card > p {
-  padding: 2px 0;
+  padding: 0.175em;
 }
 
 .card--icon {
-  height: 14px;
+  height: 1.2em;
   border-radius: 0.5px;
-  padding-right: 2px;
+  padding-right: 0.175em;
+}
+
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--price {
+  margin-top: auto;
+}
+
+.card--title,
+.card--price {
+  margin: 0.2em 0;
 }
