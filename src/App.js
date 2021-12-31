@@ -22,7 +22,7 @@ function App() {
         
         {...item}
       />
-    )
+    );
   });
   return (
     <div>

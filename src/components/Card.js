@@ -14,7 +14,7 @@ function Card(props) {
       {badgeText && <div className="card--badge">{badgeText}</div>}
       <img 
         src={require(`../assets/img/${props.coverImg}`).default}
-        alt="AirBnB Experience"
+        alt={props.title}
         className="card--image"
       />
       <div className="card--stats">
